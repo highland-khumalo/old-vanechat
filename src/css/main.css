@@ -1,0 +1,74 @@
+html {
+    zoom: -10;
+}
+
+.center {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.cv {
+    position: relative;
+}
+
+/*
+** CO-1
+*/
+   
+.logo img {
+    display: block;
+    margin: 0 auto;
+    margin-top: 7%;
+    height: 160px;
+}
+
+/*
+** CO-2
+*/
+
+.cr-room input{
+    margin-top: 30px;
+    border: 3px solid #2F6082;
+    font-size: x-large;
+    text-align: center;
+    color: gray;
+}
+
+.cr-room input::placeholder {
+    font-size: large;
+}
+
+.cr-room button:first-of-type {
+    margin-top: 15px;
+}
+
+.p {
+    margin-top: 3px !important;
+}
+
+.cr-room button {
+    background-color: #2F6082;
+    border: transparent;
+    color: white;
+    font-size: large;
+    display: block;
+    margin: 0 auto;
+    padding: 5px;
+}
+
+.cr-room button:hover {
+    background-color: white;
+    color: #2F6082;
+    border: 3px solid #2F6082;
+}
+
+/*
+** CO-3
+*/
+
+.explanation {
+    font-size: small;
+    color: gray;
+    margin-top: 15px;
+}
