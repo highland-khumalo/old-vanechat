@@ -4,7 +4,6 @@ include "hexicon.php";
 if (isset($_GET['room']) && isset($_GET['name']) && isset($_GET['cr'])) {
     $room = $_GET['room'];
     $name = $_GET['name'];
-    echo "Creating Room: " . $room . "<br/>";
     
     $room_dir = "rooms/" . $room . "/";
     mkdir($room_dir);
@@ -15,12 +14,12 @@ if (isset($_GET['room']) && isset($_GET['name']) && isset($_GET['cr'])) {
     file_put_contents($room_dir . "room.json", ""); 
     setcookie("user", $name, time() + 86400, "/");
     setcookie("room", $room, time() + 86400, "/");
+    echo "Creating Room: " . $room . "<br/>";
 }
 
 if (isset($_GET['room']) && isset($_GET['name']) && isset($_GET['jn'])) {
     $room = $_GET['room'];
     $name = $_GET['name'];
-    echo "Joining Room: " . $room;
 
     $room_dir = "rooms/" . $room . "/";
     if (is_dir($room_dir)) {
@@ -31,6 +30,7 @@ if (isset($_GET['room']) && isset($_GET['name']) && isset($_GET['jn'])) {
         file_put_contents($room_dir . "room" . ".json", "");
         setcookie("user", $name, time() + 86400, "/");
         setcookie("room", $room, time() + 86400, "/");
+        echo "Joining Room: " . $room;
     }
 }
 sleep(2);
